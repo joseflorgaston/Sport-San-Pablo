@@ -14,7 +14,7 @@ export default {
     script: [
       {
         src:"https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v14.0&appId=383753250443311&autoLogAppEvents=1",
-        nonce: "lnxPwlQ0",
+        nonce: "1wxavoQb",
         crossorigin:"anonymous",
         body: true,
         async: true,
