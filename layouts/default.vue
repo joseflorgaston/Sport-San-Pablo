@@ -91,6 +91,11 @@ body {
   width: 100%;
 }
 
+.active {
+  border-bottom: solid;
+  border-color: #00aaff;
+}
+
 .hvr-grow {
   display: inline-block;
   vertical-align: middle;

@@ -49,22 +49,8 @@
             NOTICIAS DEL CLUB
           </span>
           <div v-for="(publication, key) in publications" :key="key">
-            <div class="d-flex mt-2 hvr-grow publication">
-              <div class="portada">
-                <v-img :src="publication.image" height="55px" width="80px"></v-img>
-              </div>
-              <div class="px-2">
-                <div>
-                  <span class="font-weight-bold white--text">
-                    {{publication.title}}
-                  </span>
-                </div>
-                <div class="d-flex font-weight-bold grey--text" style="font-size: 12px;">
-                  <v-icon small color="grey">mdi-calendar</v-icon>
-                  {{publication.date}}
-                </div>
-                <div class="grey--text" style="font-size: 12px;">12:33:30 +0200</div>
-              </div>
+            <div class="hvr-grow publication">
+              <NewsCard v-bind="publication" />
             </div>
           </div>
         </div>
@@ -74,58 +60,41 @@
 </template>
 
 <script>
+import NewsCard from '~/components/Shared/NewsCard.vue';
 export default {
-  name: 'IndexPage',
+  name: "IndexPage",
   data() {
     return {
       publications: [
         {
-          image: require('/assets/images/footballnet4.jpg'),
+          image: require("/assets/images/footballnet4.jpg"),
           title: "Cadete campeon de liga",
           date: "- lunes 13 junio 2022"
         },
         {
-          image: require('/assets/images/footballnet4.jpg'),
+          image: require("/assets/images/footballnet4.jpg"),
           title: "Cadete campeon de liga",
           date: "- lunes 13 junio 2022"
         },
         {
-          image: require('/assets/images/footballnet4.jpg'),
+          image: require("/assets/images/footballnet4.jpg"),
           title: "Cadete campeon de liga",
           date: "- lunes 13 junio 2022"
         },
         {
-          image: require('/assets/images/footballnet4.jpg'),
+          image: require("/assets/images/footballnet4.jpg"),
           title: "Cadete campeon de liga",
           date: "- lunes 13 junio 2022"
         },
       ],
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/',
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire',
-        },
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js',
-    }
+    };
   },
   methods: {
     menuItems() {
       return this.menu;
     }
-  }
+  },
+  components: { NewsCard }
 }
 </script>
 <style>
@@ -134,11 +103,6 @@ export default {
   border-width: 0.4rem;
   border-color: #00aaff;
   width: 100%;
-}
-
-.active {
-  border-bottom: solid;
-  border-color: #00aaff;
 }
 
 .publication:hover {
