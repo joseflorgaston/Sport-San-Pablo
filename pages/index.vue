@@ -5,43 +5,10 @@
     </div>
     <v-row>
       <v-col cols="12" sm="6" lg="4">
-        <div class="pa-5">
-          <span class="font-weight-bold primary--text">
-            BIENVENIDO AL CLUB SPORT SAN PABLO
-          </span>
-          <ul class="my-2">
-            <li>
-              <span class="font-weight-bold">País: </span> Paraguay
-            </li>
-            <li>
-              <span class="font-weight-bold">Fecha de Fundacion: </span> 2022
-            </li>
-            <li>
-              <span class="font-weight-bold">Disciplinas deportivas: </span> Futbol
-            </li>
-            <li>
-              <span class="font-weight-bold">Sede: </span> Ypacarai
-            </li>
-          </ul>
-          <span>
-            Somos un equipo mixto de fútbol a quiénes nos encanta el fútbol y que disfrutamos con los amigos en este
-            gran deporte que practicamos. Únete a nuestra aventura y ven a apoyarnos en todos los partidos que puedas.
-          </span>
-        </div>
+        <WelcomeDescription class="pt-5 px-6" />
       </v-col>
       <v-col cols="12" sm="6" lg="4">
-        <div class="pa-5">
-          <span class="font-weight-bold primary--text">
-            SIGUENOS EN FACEBOOK
-          </span>
-          <div class="pt-2" style="max-height: 320px; height: 280px;">
-            <iframe
-              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCSSP.42%2F%3Fhc_ref%3DARSIZoalM9UGm0AxZyyDS8dFQWf8VZjj9FLEeo0tul7g51ycHay96RtQfq4fmDQkfs0%26fref%3Dnf&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=383753250443311"
-              width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-              allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-          </div>
-        </div>
+        <FacebookIframe class="pa-5"/>
       </v-col>
       <v-col cols="12" sm="6" lg="4">
         <div class="pa-5">
@@ -61,6 +28,8 @@
 
 <script>
 import NewsCard from '~/components/Shared/NewsCard.vue';
+import WelcomeDescription from '~/components/Index/WelcomeDescription.vue';
+import FacebookIframe from '~/components/Index/FacebookIframe.vue';
 export default {
   name: "IndexPage",
   data() {
@@ -94,7 +63,7 @@ export default {
       return this.menu;
     }
   },
-  components: { NewsCard }
+  components: { NewsCard, WelcomeDescription, FacebookIframe }
 }
 </script>
 <style>
