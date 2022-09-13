@@ -1,7 +1,9 @@
 <template>
   <v-row class="mt-1" justify="center" align="center">
     <div class="mx-2 px-3" style="width: 100%;">
-      <v-img class="banner" :src="require('/assets/images/banner.jpg')"></v-img>
+      <div class="mx-2 px-3" style="width: 100%;">
+        <v-img class="banner" :src="require('/assets/images/banner.jpg')"></v-img>
+      </div>
     </div>
     <v-row>
       <v-col cols="12" sm="6" lg="4">
@@ -87,6 +89,11 @@ export default {
           date: "- lunes 13 junio 2022"
         },
       ],
+      images: [
+        require("/assets/images/banner.jpg"),
+        require("/assets/images/sport-san-pablo-banner-2.jpg"),
+        "https://www.holdsport.dk/media/W1siZiIsIjIwMjIvMDYvMDkvN2x0Yzl5MXNvdF9ncnVwb19kZV9uaW5fb3NfanVnYW5kb19mdV90Ym9sX2VuX3Nlc2lvX25fZW50cmVuYW1pZW50b191bl9jbHViX2Nvbl9jYW1pc2V0YXNfYXp1bGVzX3lfa2l0c19jaGljb3NfZmVsaWNlc19wcmFjdGljYW5kb19lbnRyZW5hZG9yXzIwODQ4MTQ4Ny5qcGciXSxbInAiLCJlbmNvZGUiLCJqcGciXV0/grupo-de-nin%CC%83os-jugando-fu%CC%81tbol-en-sesio%CC%81n-entrenamiento-un-club-con-camisetas-azules-y-kits-chicos-felices-practicando-entrenador-208481487.jpg?sha=68e46b93c994af48"
+      ]
     };
   },
   methods: {
@@ -102,7 +109,6 @@ export default {
   border-bottom: solid;
   border-width: 0.4rem;
   border-color: #00aaff;
-  width: 100%;
 }
 
 .publication:hover {
